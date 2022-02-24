@@ -1,4 +1,4 @@
-package main
+package als_golang
 
 import "fmt"
 
