@@ -12,16 +12,13 @@ type PlatformChecker struct {
 }
 
 func CheckPlatformArray(array []string, value string) *PlatformChecker {
-	var status []bool
-	var platform_type []string
+	var checker *PlatformChecker
 
 	for i := 0; i <= 2; i++ {
-		if value != array[i] {
-			append(&status)
-		} else {
+		if value == array[i] {
 			checker = &PlatformChecker{
-				status:        true,
-				platform_type: array[i],
+				status: true,
+				platform_type: array[i]
 			}
 		}
 	}
