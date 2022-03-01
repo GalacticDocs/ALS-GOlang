@@ -18,7 +18,7 @@ func CheckPlatformArray(array []string, value string) *PlatformChecker {
 		if value == array[i] {
 			checker = &PlatformChecker{
 				status: true,
-				platform_type: array[i]
+				platform_type: array[i],
 			}
 		}
 	}

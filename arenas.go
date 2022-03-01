@@ -16,7 +16,7 @@ type ArenasGeneral struct {
 **Player Name**: You must use the Origin account name linked to the Steam account otherwise you may run into errors.
  */
 func ArenasGeneralStats(APIToken string, platform string, player string) (*ArenasGeneral, error) {
-	plat := CheckPlatformArray(possible_platforms,platform)
+	plat := CheckPlatformArray(possible_platforms, platform)
 
 	res, err := client.Get(BASE + "&platform=" + platform + "&player=" + player)
 	if err != nil {
