@@ -2,9 +2,7 @@ package als_golang
 
 import (
 	"fmt"
-
 	"go.uber.org/zap"
-
 	"github.com/andersfylling/disgord"
 )
 

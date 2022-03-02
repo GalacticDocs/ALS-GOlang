@@ -1,6 +1,9 @@
 package als_golang
 
-import "errors"
+import (
+	"errors"
+	"als_golang"
+)
 
 var (
 	possible_platforms = []string{"PC", "X1", "PS4"}
