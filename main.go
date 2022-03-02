@@ -1,7 +1,5 @@
 package als_golang
 
-import "fmt"
-
 func main() {
-	ArenasGeneralStats()
+	ArenasGeneralStats("q0mHvaKUsEksrUHcksAA", "PC", "MochiIsVibin")
 }

@@ -17,17 +17,17 @@ type ArenasGeneral struct {
 **Possible platforms**: "PC", "PS4", "X1"
 **Player Name**: You must use the Origin account name linked to the Steam account otherwise you may run into errors.
  */
-func ArenasGeneralStats(APIToken string, platform string, player string) (*ArenasGeneral, error) {
+func ArenasGeneralStats(APIToken string, platform string, player string) error {
 	plat, platform_err := CheckPlatformArray(possible_platforms, platform)
 	if platform_err != nil {
-		return nil, platform_err
+		return platform_err
 	}
 
-	res, http_err := client.Get(BASE + "&platform=" + plat.platform_type + "&player=" + player)
-	if http_err != nil {
-		return nil, http_err
+	res, err := GetHTTP(BASE + "&platform=" + plat.platform_type + "&player=" + player)
+	if err != nil {
+		return err
 	}
 
-	fmt.Printf("res: %v\n", res)
-	return nil, nil
+	fmt.Printf("res: %v\n", string(res))
+	return nil
 }
