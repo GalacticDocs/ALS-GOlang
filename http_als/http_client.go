@@ -1,4 +1,4 @@
-package als_golang
+package http_als
 
 import (
 	"io/ioutil"

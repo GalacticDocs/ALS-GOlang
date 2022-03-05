@@ -1,9 +1,10 @@
-package als_golang
+package als_utils
 
 import (
 	"fmt"
-	"go.uber.org/zap"
+
 	"github.com/andersfylling/disgord"
+	"go.uber.org/zap"
 )
 
 type ILogger struct {

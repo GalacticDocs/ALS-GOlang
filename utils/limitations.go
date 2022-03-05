@@ -1,8 +1,7 @@
-package als_golang
+package als_utils
 
 import (
 	"errors"
-	"als_golang"
 )
 
 var (
@@ -32,7 +31,7 @@ func CheckPlatformArray(array []string, value string) (*PlatformChecker, error) 
 		}
 	}
 
-	if checker.status == false || checker.platform_type == "unknown" {
+	if !checker.status || checker.platform_type == "unknown" {
 		return nil, InvPlatfErr
 	}
 
