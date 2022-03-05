@@ -4,10 +4,6 @@ import (
 	"errors"
 )
 
-var (
-	possible_platforms = []string{"PC", "X1", "PS4"}
-)
-
 type PlatformChecker struct {
 	status        bool
 	platform_type string

@@ -1,8 +1,8 @@
 package als_golang
 
-import "fmt"
-
-const BASE string = "https://api.mozambiquehe.re/bridge?version=5"
+import (
+	"fmt"
+)
 
 /*
 **Functionality**: Used to get the general statistics for a player from Arenas kills, damage done, wins.
@@ -10,18 +10,7 @@ const BASE string = "https://api.mozambiquehe.re/bridge?version=5"
 **Player Name**: You must use the Origin account name linked to the Steam account otherwise you may run into errors.
  */
 func ArenasGeneralStats(APIToken string, platform string, player string) error {
-	plat, platform_err := CheckPlatformArray(possible_platforms, platform)
-	if platform_err != nil {
-		return platform_err
-	}
-
-	res, err := GetHTTP(BASE + "&platform=" + plat.platform_type + "&player=" + player)
-	if err != nil {
-		return err
-	}
-
-	fmt.Printf("res: %v\n", string(res))
-	return nil
+	
 }
 
 func main() {

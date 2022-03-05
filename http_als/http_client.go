@@ -6,6 +6,12 @@ import (
 	"time"
 )
 
+var (
+
+	Auth = "&auth="
+	Player = ""
+)
+
 func GetHTTP(URL string) ([]byte, error) {
 	var (
 		transport = &http.Transport{
@@ -32,3 +38,5 @@ func GetHTTP(URL string) ([]byte, error) {
 
 	return body, nil
 }
+
+func GetALS() {}
