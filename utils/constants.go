@@ -12,3 +12,12 @@ const (
 	/* Identifier for the playstation platform. */
 	Playstation = "PS4"
 )
+
+const (
+	/* Identifier for the general statistics. */
+	GeneralStats = "general"
+	/* Identifier for the advanced statistics. */
+	AdvancedStats = "advanced"
+	/* Identifier for both/all statistics. */
+	BothStats = "both"
+)
