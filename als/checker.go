@@ -27,8 +27,6 @@ func CheckBattleRoyaleConfig(config BattleRoyaleConfig) string {
 		return utils.GeneralStats
 	} else if config.AdvancedOnly {
 		return utils.AdvancedStats
-	} else if config.Both {
-		return utils.BothStats
 	}
 
 	return utils.GeneralStats

@@ -18,6 +18,4 @@ const (
 	GeneralStats = "general"
 	/* Identifier for the advanced statistics. */
 	AdvancedStats = "advanced"
-	/* Identifier for both/all statistics. */
-	BothStats = "both"
 )
