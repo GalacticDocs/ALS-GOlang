@@ -13,7 +13,7 @@ var Platforms []string = []string{
 	utils.Playstation,
 }
 
-func GetArenasStats(platform string, player_name string) (*GeneralArenas, error) {
+func GetArenasStats(platform string, player_name string) (*utils.GeneralArenas, error) {
 	plat, platform_err := utils.CheckPlatformArray(Platforms, platform)
 	if platform_err != nil {
 		return nil, platform_err
@@ -21,9 +21,9 @@ func GetArenasStats(platform string, player_name string) (*GeneralArenas, error)
 
 	res, err := http.GetHTTP(utils.BASE + "&platform=" + plat.platform_type + "&player=" + player)
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	fmt.Printf("res: %v\n", string(res))
-	return nil
+	return nil, nil
 }
